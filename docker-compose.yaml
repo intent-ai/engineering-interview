@@ -1,0 +1,14 @@
+version: "3.1"
+
+services:
+  exchange:
+    image: harbor.intent.ai/interview/engineering
+    container_name: intent-exchange
+    environment:
+      - BIDDER_ENDPOINT=example.endpoint
+    networks:
+      - intent
+    volumes:
+      - ./:/app
+networks:
+  intent:
